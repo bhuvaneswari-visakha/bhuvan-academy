@@ -146,7 +146,7 @@ function Contact() {
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
-              className="relative flex justify-center"
+              className="relative hidden lg:flex justify-center"
             >
               <div className="w-full max-w-md aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
                 <img
