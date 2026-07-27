@@ -142,12 +142,12 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Right Content - Hero Image */}
+          {/* Right Content - Hero Image — hidden on mobile */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative flex items-center justify-center"
+            className="relative hidden lg:flex items-center justify-center"
           >
             {/* Orange Glow */}
             <motion.div
@@ -169,7 +169,7 @@ const Hero = () => {
       {/* Features Cards */}
       <div className="mt-10 pb-12">
         <Container>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {features.map((f, idx) => (
               <motion.div
                 key={f.title}
@@ -177,7 +177,7 @@ const Hero = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-white rounded-2xl p-5 shadow-md border border-gray-100 flex items-start gap-4 hover:shadow-lg transition-shadow"
+                className="bg-white rounded-2xl p-5 shadow-md border border-gray-100 flex items-center gap-4 hover:shadow-lg transition-shadow"
               >
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0 shadow-sm"
@@ -185,7 +185,7 @@ const Hero = () => {
                 >
                   {f.icon}
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h3 className="font-semibold text-[#22333B] text-sm">{f.title}</h3>
                   <p className="text-xs text-gray-500 mt-1 leading-5">{f.desc}</p>
                 </div>
