@@ -131,7 +131,7 @@ function About() {
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
-              className="relative flex justify-center"
+              className="relative hidden lg:flex justify-center"
             >
               <div className="absolute w-80 h-80 rounded-full bg-orange-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
               <img
